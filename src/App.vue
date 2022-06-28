@@ -1,37 +1,35 @@
-<!-- <template>
-  <div id="app">
-    路由出口
-    路由匹配到的组件将渲染在这里 
-  </div>
-</template> -->
-
-
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+<script >
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
-  asdasdasdasdasasda
-  <router-view v-slot="{ Component }">
+  <!-- <router-view class="main-land">
     <transition>
       <keep-alive>
         <component :is="Component" />
       </keep-alive>
     </transition>
-  </router-view>
+  </router-view> -->
+  <p>
+    <!--使用 router-link 组件进行导航 -->
+    <!--通过传递 `to` 来指定链接 -->
+    <!--`<router-link>` 将呈现一个带有正确 `href` 属性的 `<a>` 标签-->
+    <router-link to="/">Go to Home</router-link>
+    <router-link to="/about">Go to About</router-link>
+  </p>
+  <router-view class="main-land"></router-view>
 </template>
 
 <style>
+body {
+  margin: 0;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-land {
+  width: 100%;
+  height: 100%;
 }
 </style>
